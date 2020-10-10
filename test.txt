@@ -1,2 +1,5 @@
-this is a test file
--Jordan
+We are building a Chrome extension to act as a timer app that will only go off when you
+finish the video/activity you are watching/doing.
+User will input an amount of time they wish to take a break for (and maybe a max breaktime)
+and the extension will pop up with a reminder to do a task (either "get back to task", or they 
+can input a task name(s) possbily?)
