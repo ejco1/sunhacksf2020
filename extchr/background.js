@@ -7,11 +7,11 @@ chrome.alarms.onAlarm.addListener(function() {
   chrome.browserAction.setBadgeText({text: ''});
   chrome.notifications.create({
       type:     'basic',
-      iconUrl:  'stay_hydrated.png',
-      title:    'Time to Hydrate',
-      message:  'Everyday I\'m Guzzlin\'!',
+      iconUrl:  'icon.png',
+      title:    'Time\'s up',
+      message:  'Your time is up\!',
       buttons: [
-        {title: 'Keep it Flowing.'}
+        {title: 'New timer'}
       ],
       priority: 0});
 });
