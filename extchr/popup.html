@@ -8,7 +8,7 @@
         }
         #icon {
           width: 128px;
-          margin: 5px;
+          margin: 128px;
         }
         button{
           height: 30px;
@@ -18,9 +18,10 @@
       </style>
     </head>
     <body>
+    <img src="icon.png" id="iconImage">
       <input type="number" id="myNum" value="">
-      <button onclick="setAlarm()"> Start Break</button>
-      <button onclick="cancelAlarm()">Cancel Break</button>
+      <button id="testButton" value = "1">Set Alarm</button>
+      <button id="cancelButton">Cancel Alarm</button>
 
       <script src="popup.js"></script>
     </body>
