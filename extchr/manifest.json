@@ -2,7 +2,7 @@
 	"name": "Let Me Finish This",
 	"version": "0.1",
 	"description": "An extension designed as a timer which knows to delay until after a video completes.",
-	"permissions": ["alarms", "notifications", "storage"],
+	"permissions": ["alarms", "notifications", "storage", "tabs"],
 	"background": { 
 		"scripts": ["background.js"],
 		"persistent": false

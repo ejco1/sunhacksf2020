@@ -4,25 +4,18 @@
 'use strict';
 
 chrome.alarms.onAlarm.addListener(function() {
+  var x = 0;
+  while(chrome.tabs.audible == false && x == 0){ // So this checks to see if no more tabs are playing sound, and makes sure it only plays once.
   chrome.browserAction.setBadgeText({text: ''});
   chrome.notifications.create({
       type:     'basic',
       iconUrl:  'icon.png',
       title:    'Time\'s up',
-      message:  'Your time is up\!',
-      buttons: [
-        {title: 'New timer'}
-      ],
+      message:  'Your break is over\!',
+      
       priority: 0});
+      x = 1;
+  }
 });
 
-chrome.notifications.onButtonClicked.addListener(function() {
-  chrome.storage.sync.get(['minutes'], function(item) {
-    chrome.browserAction.setBadgeText({text: 'ON'});
-    chrome.alarms.create({delayInMinutes: item.minutes});
-  });
-});
 
-function smartAlarm() {
-  
-}
