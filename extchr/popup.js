@@ -3,8 +3,8 @@
 // found in the LICENSE file.
 'use strict';
 
-function setAlarm(event) {
-  let minutes = parseFloat(event.target.value);
+function setAlarm() {
+  let minutes = parseFloat(document.getElementById("myNum").value);
   chrome.browserAction.setBadgeText({text: 'ON'});
   chrome.alarms.create({delayInMinutes: minutes});
   chrome.storage.sync.set({minutes: minutes});

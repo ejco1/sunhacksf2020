@@ -4,8 +4,6 @@
 'use strict';
 
 chrome.alarms.onAlarm.addListener(function() {
-  var x = 0;
-  while(chrome.tabs.audible == false && x == 0){ // So this checks to see if no more tabs are playing sound, and makes sure it only plays once.
   chrome.browserAction.setBadgeText({text: ''});
   chrome.notifications.create({
       type:     'basic',
@@ -14,8 +12,6 @@ chrome.alarms.onAlarm.addListener(function() {
       message:  'Your break is over\!',
       
       priority: 0});
-      x = 1;
-  }
 });
 
 
