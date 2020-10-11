@@ -1,10 +1,16 @@
 { 
-	"name": "Remind Me After",
+	"name": "Let Me Finish This",
 	"version": "0.1",
 	"description": "An extension designed as a timer which knows to delay until after a video completes.",
+	"permissions": ["alarms", "notifications", "storage"],
 	"background": { 
 		"scripts": ["background.js"],
 		"persistent": false
 		},
-	"manifest_version": 2
+	"manifest_version": 2,
+	"browser_action": {
+		"default_title": "Let Me Finish This",
+	    "default_popup": "popup.html",
+    	"default_icon": "icon.png"
+	}
 }
